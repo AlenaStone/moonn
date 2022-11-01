@@ -1,0 +1,240 @@
+<<<<<<< Updated upstream
+@import url(https://fonts.googleapis.com/css?family=Lora);
+body {
+margin:0;
+}
+
+.bg-img{
+background-image: url("2z6.jpg");
+position:relative;
+  width:1500px;
+height:580px;
+border:0;
+background-size: cover;
+overflow: hidden;
+ object-fit: cover;
+}
+
+h2 {
+  font-family: monospace;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  margin: 1 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: .5s linear;
+}
+
+i {
+  margin-right: 10px;
+}
+
+nav {
+  display: block;
+  width: 100%;
+  margin: 0 auto 30px;
+}
+.one ul {
+  padding: 1em 0;
+}
+.one a {
+  padding: 1em;
+
+}
+.one a:hover {
+text-decoration: underline;
+text-decoration-color: #FFFF00;
+text-underline-offset: 5px;
+}
+.one li {
+  display: inline;
+}
+
+.waves {
+  position:relative;
+  width:130%;
+  height:100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+  bottom:-150px;
+  left:-100px;
+
+
+}
+
+.content {
+  position:relative;
+  height:100vh;
+  text-align:auto;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+=======
+@import url(https://fonts.googleapis.com/css?family=Lora);
+body {
+margin:0;
+}
+
+.bg-img{
+background-image: url("2z6.jpg");
+position:relative;
+  width:1500px;
+height:580px;
+border:0;
+background-size: cover;
+overflow: hidden;
+ object-fit: cover;
+}
+
+h2 {
+  font-family: monospace;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  margin: 1 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: .5s linear;
+}
+
+i {
+  margin-right: 10px;
+}
+
+nav {
+  display: block;
+  width: 100%;
+  margin: 0 auto 30px;
+}
+.one ul {
+  padding: 1em 0;
+}
+.one a {
+  padding: 1em;
+
+}
+.one a:hover {
+text-decoration: underline;
+text-decoration-color: #FFFF00;
+text-underline-offset: 5px;
+}
+.one li {
+  display: inline;
+}
+
+.waves {
+  position:relative;
+  width:130%;
+  height:100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+  bottom:-150px;
+  left:-100px;
+
+
+}
+
+.content {
+  position:relative;
+  height:100vh;
+  text-align:auto;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+>>>>>>> Stashed changes
+}
