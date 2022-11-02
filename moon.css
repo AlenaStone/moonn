@@ -9,7 +9,7 @@ body {
   font-family: sans-serif;
 }
 section {
-	height: 100vh;
+	height: 100%;
 	weight: auto;
 	 background-image: url("mainnn.jpg");
 	background-size: cover;
@@ -78,7 +78,7 @@ line-height: 1,5;
 }
 
 .main-text h1{
-width: 10em;
+width: 60%;
 
 }
 .main-text p{
@@ -159,3 +159,8 @@ width: 10em;
   h1 {
     font-size:24px;
   }
+@media (max-width: 1000px) {
+  .section {
+    background-image: url(mainmob.jpg);
+  }
+}
