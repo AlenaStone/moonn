@@ -110,7 +110,7 @@ position:absolute;
   padding: 50%;
   border: 2%;
   border-radius: 25%;
-  border-style: solid;
+  border-style: ridge;
   font-weight: bold;
   transition: .5s;
 }
@@ -120,6 +120,9 @@ display:block;
 margin-left: auto;
 margin-right: auto;
 
+}
+.size{
+padding:54%;
 }
 .waves {
   position:relative;
