@@ -20,7 +20,7 @@ section {
 
 header {
     align-items: center;
-	height: 10%;
+	height: 100%;
 
 
 }
@@ -33,15 +33,7 @@ header {
      text-align: left;
  }
 
-nav {
-
-
-
-
-}
-
-
-ul {
+.menu-main {
 	display: flex;
     flex-flow: nowrap;
 	flex-direction: row;
@@ -53,7 +45,7 @@ ul {
 
 }
 
-ul li a {
+.menu-main li a {
 	padding: 10px;
 	margin: 10px;
 	text-decoration: none;
@@ -63,7 +55,7 @@ ul li a {
 }
 
 
-ul li a:hover {
+.menu-main li a:hover {
 text-decoration: underline;
 text-decoration-color: #FFFF00;
 text-underline-offset: 5px;
@@ -81,9 +73,6 @@ line-height: 1,5;
 width: 60%;
 
 }
-.main-text p{
-
-}
 
 .main-text a.button {
   display: inline-block;
@@ -92,28 +81,59 @@ width: 60%;
   padding: 5px;
   border-radius: 20px;
   text-decoration: none;
-  font-weight: 200;
+
   margin-left: 5em;
+
   align-items: center;
 }
 
+.blocks {
+position:absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: auto;
+   z-index:2;
+   margin-left: 45%;
+   margin-right: 50%;
+}
 
+.block {
+  text-align: center;
+  font-size: 1em;
+  height: auto;
+  margin: 50%;
+  text-decoration: none;
+  background: white;
+  padding: 50%;
+  border: 2%;
+  border-radius: 25%;
+  border-style: solid;
+  font-weight: bold;
+  transition: .5s;
+}
+.blocks img {
+display:block;
+ width:60%;
+margin-left: auto;
+margin-right: auto;
+
+}
 .waves {
   position:relative;
   width:100%;
   height:auto;
   background-repeat: repeat no-repeat;
-  background-position: 0 bottom;
   transform-origin: center bottom;
-  top:1em;
-
-
-
+  z-index:1;
+  margin-bottom:-1%;
 }
-
 .content {
   position:relative;
-  height:100vh;
+  z-index: 1;
+  height:auto;
   text-align:auto;
   background-color: white;
 }
@@ -139,6 +159,18 @@ width: 60%;
   animation-delay: -5s;
   animation-duration: 20s;
 }
+
+main{
+  height: 100%;
+  	weight: auto;
+}
+
+.cats{
+margin-top: 15%;
+line-height: 1,8;
+text-align: center;
+}
+
 @keyframes move-forever {
   0% {
    transform: translate3d(-90px,0,0);
@@ -156,11 +188,10 @@ width: 60%;
   .content {
     height:30vh;
   }
-  h1 {
-    font-size:24px;
-  }
+
 @media (max-width: 1000px) {
   .section {
     background-image: url(mainmob.jpg);
   }
 }
+
