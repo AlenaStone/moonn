@@ -10,6 +10,7 @@ body {
 }
 section {
 	height: 100vh;
+	weight: auto;
 	 background-image: url("mainnn.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -20,7 +21,7 @@ section {
 header {
     align-items: center;
 	height: 10%;
-    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+
 
 }
 
