@@ -104,14 +104,35 @@ position:absolute;
   height: auto;
   margin: 50%;
   text-decoration: none;
-  background: white;
-  padding: 50%;
-  border: 2%;
-  border-radius: 25%;
-  border-style: ridge;
-  font-weight: bold;
+  
+  padding: 40%;
+  border: 1%;
   transition: .5s;
+    border-radius: 50%;
 }
+
+.block a{
+ display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  transition: all .35s;
+}
+
+.block a:hover{
+  width: 200px;
+  background: transparent;
+  color: black;
+}
+
 
 .blocks img {
 display:block;
@@ -170,10 +191,11 @@ padding:64%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  margin-top: -2%;
 }
 
 .cats{
-  margin-top: 25%;
+  margin-top: 15%;
   line-height: 2;
   text-align: center;
 }
@@ -258,8 +280,64 @@ margin-top: 100px;
  margin-left: 10px;
 }
 
-.more {
-align-items: center;
+.wrapper{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
+.link_wrapper a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #2ecc71;
+  transition: all .35s;
+}
+
+.link_wrapper a:hover{
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.link_wrapper a:hover + .icon{
+  border: 3px solid #2ecc71;
+  right: -25%;
 }
 
 .statistik{
