@@ -102,10 +102,10 @@ position:absolute;
   text-align: center;
   font-size: 1em;
   height: auto;
-  margin: 1em;
+  margin: 2em;
+  margin-top: 10em;
   text-decoration: none;
-
-  padding: 40%;
+  padding: 10%;
   border: 1%;
   transition: .5s;
     border-radius: 50%;
@@ -141,10 +141,7 @@ margin-left: auto;
 margin-right: auto;
 }
 
-.size{
 
-padding:64%;
-}
 
 .waves {
   position:relative;
