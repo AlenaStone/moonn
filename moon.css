@@ -192,7 +192,7 @@ margin-right: auto;
 }
 
 .cats{
-  margin-top: 15%;
+  margin-top: 25%;
   line-height: 2;
   text-align: center;
 }
@@ -355,6 +355,7 @@ background: ffc0cb;
 margin: 0;
 padding:0;
 background-size: cover;
+	background-repeat: no-repeat;
 }
 
 @keyframes move-forever {
