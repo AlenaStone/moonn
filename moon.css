@@ -364,7 +364,7 @@ background: ffc0cb;
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   
+
    background-size: cover;
 	background-repeat: no-repeat;
     background-position: center center;
@@ -411,13 +411,6 @@ background: ffc0cb;
   opacity: 1;
 }
 
-.logof img{
-    margin-left: 1em;
-    max-width: 10%;
-    height: auto !important;
-     vertical-align: bottom;
-     margin-bottom: -4%;
-}
 
 
 
