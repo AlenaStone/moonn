@@ -5,8 +5,12 @@
 }
 
 body {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
   font-size: 100%;
   font-family: sans-serif;
+   min-height: 100vh;
 }
 section {
 	height: 100%;
@@ -74,15 +78,16 @@ width: 50%;
 align-items: center;
 }
 
-.main-text a.button {
+.main-text a.but {
   display: inline-block;
-  background: #FFFF00;
+  background: #ffe141;
   color: black;
-  padding: 5px;
+  padding: 10px;
   border-radius: 20px;
   text-decoration: none;
-  margin-left: 5em;
+  margin-left: 15%;
   align-items: center;
+  margin-top: 2%;
 }
 
 .blocks {
@@ -103,12 +108,10 @@ position:absolute;
   font-size: 1em;
   height: auto;
   margin: 2em;
-  margin-top: 10em;
+  margin-top: 7em;
   text-decoration: none;
-  padding: 10%;
-  border: 1%;
+  padding: 5%;
   transition: .5s;
-    border-radius: 50%;
 }
 
 .block a{
@@ -188,11 +191,11 @@ margin-right: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-top: -2%;
+  margin: 10%;
 }
 
 .cats{
-  margin-top: 25%;
+  margin-top: 17%;
   line-height: 2;
   text-align: center;
 }
@@ -352,11 +355,73 @@ background: ffc0cb;
 }
 
 .footer{
-margin: 0;
-padding:0;
-background-size: cover;
+   position: relative;
+   width: 100%;
+   background: #808080;
+   min-height: 100%;
+   padding: 20px 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 5%;
+   background-size: cover;
 	background-repeat: no-repeat;
+    background-position: center center;
 }
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.logof img{
+    margin-left: 1em;
+    max-width: 10%;
+    height: auto !important;
+     vertical-align: bottom;
+     margin-bottom: -4%;
+}
+
+
+
+
 
 @keyframes move-forever {
   0% {
