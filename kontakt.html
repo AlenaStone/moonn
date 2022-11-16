@@ -7,6 +7,7 @@
   <title>ShinyLeo Tribe</title>
 
   <link href="kontakt.css" rel="stylesheet">
+  <link href="sendmessage.php" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,13 +56,77 @@ jQuery(function($){
  </div>
     <div id="inline">
       <h2 class = "onl">Онлайн заявка</h2>
-      <form id="contact" action="sendmessage.php" method="post" name="contact">
+      <form id="contact" action="#" method="post" name="contact">
         <input id="name" class="txt" name="name" type="name" placeholder="Ваше имя">
         <input id="phone" class="txt" name="phone" type="phone" placeholder="Ваш телефон">
         <input id="email" class="txt" name="email" type="email" placeholder="Ваш e-mail">
-        <textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea><button id="send">Отправить</button></form></div>
-</form>
+        <textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea><button id="send">Отправить</button>
+      </form>
  </div>
+
+    <script type="text/javascript">
+  function validateEmail(email) {
+    var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return reg.test(email);
+  }
+
+  $(document).ready(function() {
+    $("#contact").submit(function() { return false; });
+    $("#send").on("click", function(){
+      var emailval  = $("#email").val();
+      var namevl  = $("#name").val();
+      var phonevl  = $("#phone").val();
+      var msgval    = $("#msg").val();
+      var msglen    = msgval.length;
+      var mailvalid = validateEmail(emailval);
+
+      if(mailvalid == false) {
+        $("#email").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#email").removeClass("error");
+      }
+  if(mailvalid == false) {
+        $("#name").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#name").removeClass("error");
+      }
+      if(mailvalid == false) {
+        $("#phone").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#phone").removeClass("error");
+      }
+      if(msglen < 4) {
+        $("#msg").addClass("error");
+      }
+      else if(msglen >= 4){
+        $("#msg").removeClass("error");
+      }
+
+      if(mailvalid == true && msglen >= 4) {
+        // если обе проверки пройдены
+        // сначала мы скрываем кнопку отправки
+        $("#send").replaceWith("<em>отправка...</em>");
+        $.ajax({
+          type: 'POST',
+          url: 'sendmessage.php',
+          data: $("#contact").serialize(),
+          success: function(data) {
+            if(data == "true") {
+              $("#contact").fadeOut("fast", function(){
+                $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");
+                setTimeout("$.fancybox.close()", 1000);
+              });
+            }
+          }
+        });
+      }
+    });
+  });
+</script>
+
 </main>
 
     <footer class = "footer">

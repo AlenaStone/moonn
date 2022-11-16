@@ -1,33 +1,29 @@
 <?php
+$sendto   = "alonsoy75@gmail.com"; // Обязательно измените e-mail на свой
+$usermail = $_POST['email'];
+$username = $_POST['name'];
+$userphone = $_POST['phone'];
+$content  = nl2br($_POST['msg']);
+// Формирование заголовка письма
+$subject  = "Новое сообщение";
+$headers  = "From: " . strip_tags($usermail) . "\r\n";
+$headers .= "Reply-To: ". strip_tags($usermail) . "\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html;charset=utf-8 \r\n";
+// Формирование тела письма
+$msg  = "<html><body style='font-family:Arial,sans-serif;'>";
+$msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Новое сообщение</h2>\r\n";
+$msg .= "<p><strong>Имя:</strong> ".$username."</p>\r\n";
+$msg .= "<p><strong>Номер телефона:</strong> ".$userphone."</p>\r\n";
+$msg .= "<p><strong>Почта:</strong> ".$usermail."</p>\r\n";
+$msg .= "<p><strong>Сообщение:</strong> ".$content."</p>\r\n";
+$msg .= "</body></html>";
 
-	if (isset($_POST['name']) && $_POST['name'] != "")//если существует атрибут NAME и он не пустой то создаем переменную для отправки сообщения
-		$name = $_POST['name'];
-	else die ("Не заполнено поле \"Имя\"");//если же атрибут пустой или не существует то завершаем выполнение скрипта и выдаем ошибку пользователю.
-
-	if (isset($_POST['email']) && $_POST['email'] != "") //тут все точно так же как и в предыдущем случае
-		$email = $_POST['email'];
-	else die ("Не заполнено поле \"Email\"");
-
-	if (isset($_POST['subjects']) && $_POST['subjects'] != "")
-		$sub = $_POST['subjects'];
-	else die ("Не заполнено поле \"Тема\"");
-
-	if (isset($_POST['message']) && $_POST['message'] != "")
-		$body = $_POST['message'];
-	else die ("Не заполнено поле \"Сообщение\"");
-
-
-
-	$address = "alonsoy75@gmail.com";//адрес куда будет отсылаться сообщение для администратора
-	$mes  = "Имя: $name \n";	//в этих строчках мы заполняем текст сообщения. С помощью оператора .= мы просто дополняем текст в переменную
-	$mes .= "E-mail: $email \n";
- 	$mes .= "Тема: $sub \n";
- 	$mes .= "Текст: $body";
-	$send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = UTF-8\r\nFrom:$email");//собственно сам вызов функции отправки сообщения на сервере
-
-	if ($send) //проверяем, отправилось ли сообщение
-		echo "Сообщение отправлено успешно! Перейти на <a href='https://You-hands.ru/'>you-hands.ru</a>, если вас не перенаправило вручную.";
-	else
-		echo "Ошибка, сообщение не отправлено! Возможно, проблемы на сервере";
+// отправка сообщения
+if(@mail($sendto, $subject, $msg, $headers)) {
+	echo "true";
+} else {
+	echo "false";
+}
 
 ?>

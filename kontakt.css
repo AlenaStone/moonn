@@ -101,10 +101,14 @@ list-style-type: none;
 
 #inline {
    margin-top: 5%;
-   margin-left:25%;
-   width:80%;
+
+   width:100%;
+   height: auto;
    background:#FFF;
    padding:10px 20px;
+}
+#contact{
+ margin-left:15%;
 }
 .txt {
    display:inline-block;
@@ -118,7 +122,8 @@ list-style-type: none;
 }
 
 .onl {
- margin-left: 19%;
+ margin-left: 15%;
+ margin-bottom:3%;
 }
 
 .txtarea {
@@ -158,6 +163,7 @@ input.error:focus, textarea.error:focus {
     background:#FADADD;
     width:210px;
     margin-bottom:20px;
+    margin-left: 30%;
 }
 #send:hover {
     background:#979797;
