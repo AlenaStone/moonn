@@ -51,7 +51,7 @@ header {
 
 .menu-main li a {
 	padding: 10px;
-	margin: 10px;
+	margin: 50px;
 	text-decoration: none;
 	color: #fff;
 	font-weight: bold;
@@ -71,24 +71,77 @@ color: #fff;
 padding: 10px;
 margin: 5em;
 line-height: 1,5;
-}
-
-.main-text h1 {
-width: 50%;
 align-items: center;
 }
 
-.main-text a.but {
-  display: inline-block;
-  background: #ffe141;
-  color: black;
-  padding: 10px;
-  border-radius: 20px;
-  text-decoration: none;
-  margin-left: 15%;
-  align-items: center;
-  margin-top: 2%;
+.headerh1 {
+width: 50%;
+text-shadow:
+    -1px -1px #FFF,
+    -2px -2px #FFF,
+    -1px 1px #FFF,
+    -2px 2px #FFF,
+    1px 1px #FFF,
+    2px 2px #FFF,
+    1px -1px #FFF,
+    2px -2px #FFF,
+    -3px -3px 2px #BBB,
+    -3px 3px 2px #BBB,
+    3px 3px 2px #BBB,
+    3px -3px 2px #BBB;
+  color: steelblue;
+  transition: all 1s;
 }
+
+H1:hover {
+  color: black;
+}
+
+button {
+  margin: 2%;
+  font-family: inherit;
+}
+
+.fill {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  z-index:2;
+ font-family: "Roboto Mono", monospace;
+}
+
+.fill::after {
+  content: "";
+  background-color: #ffe54c;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.fill:hover::after {
+  top: 0px;
+  left: 0px;
+}
+
+.fill a {
+	padding: 10px;
+	margin: 50px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+    transition: .5s;
+}
+
 
 .blocks {
 position:absolute;
@@ -192,11 +245,13 @@ margin-right: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-top:12%;
 }
 
 .cats{
   text-align: center;
+
 }
 
 
@@ -217,7 +272,8 @@ margin-top: 1%;
  -moz-border-radius: 4px;
  border-radius: 4px;
  position: relative;
- margin: 4%;
+ margin: 9%;
+ margin-bottom: 3%;
 
 }
 
@@ -283,7 +339,7 @@ margin-top: 1%;
 .wrapper{
 display: block;
   position: absolute;
-  left: 50%;
+  left: 48%;
   margin: 2%;
   transform: translate(-50%, -50%);
 }
@@ -435,14 +491,6 @@ background: ffc0cb;
   }
   }
 
-@media (max-width: 1000px) {
-  .section {
-    background-image: url(mainmob.jpg);
-  }
-.maincat {
- margin-top: 50px;
-}
-}
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
