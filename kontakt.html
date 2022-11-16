@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
   <meta charset="UTF-8">
+
   <title>ShinyLeo Tribe</title>
+
   <link href="kontakt.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="jquery.maskedinput.js"></script>
+  <script type="text/javascript">
+jQuery(function($){
+   $("#phone").mask("+7 (999) 999-9999");
+   $("#phone2").mask("+7 (999) 999-9999");
+});
+</script>
+
+
 </head>
 <body>
 <section>
@@ -40,7 +53,14 @@
      <li>assa5@yandex.ru</li>
    </ul>
  </div>
-
+    <div id="inline">
+      <h2 class = "onl">Онлайн заявка</h2>
+      <form id="contact" action="sendmessage.php" method="post" name="contact">
+        <input id="name" class="txt" name="name" type="name" placeholder="Ваше имя">
+        <input id="phone" class="txt" name="phone" type="phone" placeholder="Ваш телефон">
+        <input id="email" class="txt" name="email" type="email" placeholder="Ваш e-mail">
+        <textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea><button id="send">Отправить</button></form></div>
+</form>
  </div>
 </main>
 
@@ -63,7 +83,10 @@
           <ion-icon name="logo-instagram"></ion-icon>
         </a></li>
       </ul>
+
+    </footer>
 </body>
+
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
