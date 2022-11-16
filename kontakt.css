@@ -2,6 +2,7 @@
 	box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-size: cover;
 }
 
 body {
@@ -85,7 +86,6 @@ header {
   height: auto;
   border-radius: 54% 46% 47% 53% / 24% 55% 45% 76%;
   margin-left: 43%;
-  margin-right: 57%;
 }
 
 .infos {
