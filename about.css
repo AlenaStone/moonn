@@ -28,13 +28,15 @@ header {
    height: 100%;
    }
 
+   #menu__toggle{
+   visibility: hidden;
+   }
 
-.logo img {
-
-   margin-left: 1em;
-   max-width: 10%;
-   height: auto !important;
-   text-align: left;
+ .logo img {
+    margin-left: 1em;
+    max-width: 10%;
+    height: auto !important;
+     text-align: left;
  }
 
 .menu-main {
@@ -43,14 +45,14 @@ header {
 	flex-direction: row;
 	justify-content: left;
 	margin-left:10em;
-	margin-top: -3%;
+	margin-top: -5%;
 	transition: .5s;
     list-style-type: none;
 }
 
 .menu-main li a {
 	padding: 10px;
-	margin: 20px;
+	margin: 10px;
 	text-decoration: none;
 	color: black;
 	font-weight: bold;
@@ -59,29 +61,20 @@ header {
 
 
 .menu-main li a:hover {
-    text-decoration: underline;
-    text-decoration-color: #FFFF00;
-    text-underline-offset: 5px;
+text-decoration: underline;
+text-decoration-color: #FFFF00;
+text-underline-offset: 5px;
 }
-
-.main{
- height: auto;
-  weight: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-bottom: 5%;
-  margin-top:12%;
-}
-
 
 
 
 .footer{
-   position: relative;
+   position: fixed;
+   bottom:0;
    width: 100%;
+
    background: #808080;
-   min-height: 100%;
+   min-height: 10%;
    padding: 20px 50px;
    display: flex;
    justify-content: center;

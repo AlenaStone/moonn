@@ -1,0 +1,146 @@
+@media (max-width: 767px) {
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu-main {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  left: 350px;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #616161;
+
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu-main {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  width: 300px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #AFEEEE;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+
+  color: #333;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+.blocks {
+position:absolute;
+  display: flex;
+ flex-flow: column;
+  width: 10%;
+  height: auto;
+   z-index:2;
+   margin-left: 45%;
+   margin-right: 50%;
+
+}
+
+.maincat{
+margin-top: 150%;
+z-index:-3;
+}
+.cats{
+visibility: hidden;
+}
+
+.fill{
+visibility: hidden;
+}
+
+.main-text{
+font-size: 70%;
+}
+.onl {
+ margin-left:-2%;
+ color:#676767;
+}
+.avatar img {
+  float: center;
+  width:50%;
+  height: auto;
+  border-radius: 54% 46% 47% 53% / 24% 55% 45% 76%;
+  margin-left: 25%;
+ background-size: cover;
+}
+
+#inline {
+ background-size: cover;
+display:block;
+   margin-top: 5%;
+   width:100%;
+   height: auto;
+   padding:10px 20px;
+    margin-left:5%;
+}
+}
