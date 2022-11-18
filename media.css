@@ -73,7 +73,7 @@
 
   background-color: #AFEEEE;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-
+ z-index:100;
   transition-duration: .25s;
 }
 
@@ -100,7 +100,7 @@ position:absolute;
  flex-flow: column;
   width: 10%;
   height: auto;
-   z-index:2;
+   z-index:-3;
    margin-left: 45%;
    margin-right: 50%;
 
@@ -108,7 +108,7 @@ position:absolute;
 
 .maincat{
 margin-top: 150%;
-z-index:-3;
+
 }
 .cats{
 visibility: hidden;
