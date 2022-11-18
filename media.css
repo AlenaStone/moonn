@@ -114,6 +114,10 @@ margin-top: 150%;
 visibility: hidden;
 }
 
+.block a{
+color: black;
+}
+
 .fill{
 visibility: hidden;
 }
